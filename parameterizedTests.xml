@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="browser" value="chrome"></parameter>
+	<test thread-count="5" name="Test">
+	<parameter name="expectedPageTitle" value="Select a product to quote"></parameter>
+	<parameter name="zipCode1" value="11219"></parameter>
+	<parameter name="PropertyAddress1" value="244 Dahill road, Brooklyn ,NY -11219"></parameter>
+	<parameter name="Address1" value="244 Dahill road"></parameter>
+	<parameter name="zipCode21" value="Brooklyn"></parameter>
+	<parameter name="firstName1" value="Sabrina"></parameter>
+	<parameter name="lastName1" value="Hasan"></parameter>
+	<parameter name="dateOfBirth1" value="05-12-2001"/>
+		<classes>
+	<class name="progressive.tdd.test.property.ParameterizedProperty" />
+            <!--class name="progressive.tdd.test.bundle.BundleSaveTest" /-->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
