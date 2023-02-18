@@ -41,11 +41,11 @@ public class BaseClass extends ExtentListener {
 
 	@Parameters("browser")
 	@BeforeMethod
-	public void setUpDriver() {
+	public void setUpDriver(String browserName) {
 		// Enum example
 		// String browserName = envVar.getProperty(getString(browser));
 		// String browserName = envVar.getProperty(browser.name());
-		String browserName = envVar.getProperty(BROWSER);
+		//String browserName = envVar.getProperty(BROWSER);
 		String url = envVar.getProperty(URL);
 		long pageLoadWait = envVar.getNumProperty(PAGELOAD_WAIT);
 		long implicitwait = envVar.getNumProperty(IMPLICIT_WAIT);
