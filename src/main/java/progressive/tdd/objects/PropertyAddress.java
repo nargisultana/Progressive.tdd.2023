@@ -20,9 +20,6 @@ public class PropertyAddress {
 	public void insertPropertyAddress(String address) {
 		insert(insertPropertyAddress, address);
 	}
-	
-	
-	
 
 	@FindBy(xpath = "(//input[@name='AddressLine2'])[2]")
 	WebElement insertAptElements;
@@ -44,9 +41,10 @@ public class PropertyAddress {
 	public void insertZipCode2(String zip) {
 		insert(insertZipCode2, zip);
 	}
+
 	@FindBy(id = "paModalButton")
 	WebElement continuElement;
-	
+
 	public void clickContinueQuote() {
 		click(continuElement);
 	}
