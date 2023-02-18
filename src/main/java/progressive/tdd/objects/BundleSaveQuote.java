@@ -14,15 +14,6 @@ public class BundleSaveQuote {
 	public BundleSaveQuote(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
-	//this first commentout test not go through every time.So comment it out and try with different one.
-
-	/*  
-	 * @FindBy(xpath = "//p[text()='Better insurance starts here']") WebElement
-	 * homePageText;
-	 * public void validateHomePageText(String expectedTitle) throws
-	 * InterruptedException{ validate(homePageText, expectedTitle); }
-	 */
 
 	@FindBy(tagName = "h2")
 	WebElement homepageTextElement;

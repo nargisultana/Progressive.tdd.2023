@@ -9,8 +9,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import static progressive.tdd.utils.IConstant.*;
 
@@ -40,16 +38,14 @@ public class BaseClass extends ExtentListener {
 	protected BundleSaveQuote bundleSaveQuote;
 	protected MailingAddress mailingAddress;
 	ReadProperties envVar = new ReadProperties();
-	
-	
 
 	@Parameters("browser")
 	@BeforeMethod
-	public void setUpDriver() {
+	public void setUpDriver(String browserName) {
 		// Enum example
 		// String browserName = envVar.getProperty(getString(browser));
 		// String browserName = envVar.getProperty(browser.name());
-		String browserName = envVar.getProperty(BROWSER);
+		//String browserName = envVar.getProperty(BROWSER);
 		String url = envVar.getProperty(URL);
 		long pageLoadWait = envVar.getNumProperty(PAGELOAD_WAIT);
 		long implicitwait = envVar.getNumProperty(IMPLICIT_WAIT);

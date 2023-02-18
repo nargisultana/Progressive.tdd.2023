@@ -28,24 +28,4 @@ public class HomePage {
 
 	}
 
-	// Alibaba
-
-	/*
-	 * @FindBy(className = "cr-guide") WebElement landingPageTitle;
-	 * 
-	 * public void validateLandingPageTitle(String expectedTitle) {
-	 * validate(landingPageTitle, expectedTitle); }
-	 * 
-	 * @FindBy(xpath = "(//a[@class='cr-button'])[1]") WebElement
-	 * joinForFreeElement;
-	 * 
-	 * public void clickJoinForFree() { click(joinForFreeElement); }
-	 * 
-	 * @FindBy(xpath = "//p[text()='Better insurance starts here']") WebElement
-	 * homePageText;
-	 * 
-	 * public void validateHomePageText(String expectedTitle) throws
-	 * InterruptedException{ validate(homePageText, expectedTitle); }
-	 */
-
 }
