@@ -39,20 +39,20 @@ public class BaseClass extends ExtentListener {
 	protected MailingAddress mailingAddress;
 	ReadProperties envVar = new ReadProperties();
 
-	@Parameters("browser")
+	@Parameters({"browser"})
 	@BeforeMethod
 	public void setUpDriver(String browserName) {
 		// Enum example
 		// String browserName = envVar.getProperty(getString(browser));
 		// String browserName = envVar.getProperty(browser.name());
 		//String browserName = envVar.getProperty(BROWSER);
-		String url = envVar.getProperty(URL);
+		String givenUrl = envVar.getProperty(URL);
 		long pageLoadWait = envVar.getNumProperty(PAGELOAD_WAIT);
 		long implicitwait = envVar.getNumProperty(IMPLICIT_WAIT);
 
 		initDriver(browserName);
 		initClasses(driver);
-		driver.get(url);
+		driver.get(givenUrl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadWait));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitwait));

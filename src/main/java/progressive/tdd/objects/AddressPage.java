@@ -26,5 +26,9 @@ public class AddressPage {
 	public void clickLetsGoElement() {
 		click(letsGoElement);
 	}
+	public void verifyAddressPageTitle(String expected) {
+		//sleep(4);
+		//validate(titleVerifyCity, expected);
+	}
 
 }
