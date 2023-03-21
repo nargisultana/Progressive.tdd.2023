@@ -19,6 +19,7 @@ public class BundleSaveQuote {
 	WebElement homepageTextElement;
 
 	public void validateSelectTitle(String expectedTitle) {
+		sleep(2);
 		validate(homepageTextElement, expectedTitle);
 	}
 
@@ -26,6 +27,7 @@ public class BundleSaveQuote {
 	WebElement bundleSaveElement;
 
 	public void clickBundleSave() {
+		sleep(1);
 		click(bundleSaveElement);
 	}
 
